@@ -22,11 +22,6 @@ href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
   <body id="container">
     <header>
       <nav id="nav-bar" class="flex-column">
-       
-        <ul class="flex-column">
-          <li>
-          </li>
-        </ul>
 
         <ul class="flex-column">
           <li>
@@ -41,7 +36,7 @@ href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
           <li>
             <a href="./create_playlist.html">
               <i class="fa fa-plus"></i>
-              <span>Créer Playlists</span>
+              <span>Créer Playlist</span>
             </a>
           </li>
         </ul>
@@ -61,23 +56,106 @@ href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
       
       <div id="search-bar">
         
-        <form id="search-form" class="flex-row form-control">
+        <span>
+        <form id="search-form" class="flex-row">
           
-          <input id="search-input" type="text">
+          <input id="search-input" type="text" size= 70>
           
-          <button class="fa fa-2x fa-search" type="submit"><label></label></button>
-          
+          <button class="fa fa-2x fa-search" type="submit"></button>
 
         </form>
+        </span>
         
       </div>
 
       <div id="playlist-list">
+        
+        <h1>Mes Playlists</h1>
+        
+        <section id="playlist-container" class="playlist-container">
+
+          
+            <a class="playlist-item flex-column" href="./playlist.html">
+              <div class="playlist-preview">
+                <img src="./assets/img/default.png">
+                <i class="fa fa-2x fa-play-circle hidden playlist-play-icon"></i>
+              </div>
+              <p>Ma Premiere Playlist</p>
+              <p>Playlist de base</p>
+            </a>
+          
+
+          
+            <a class="playlist-item flex-column" href="./playlist.html">
+              <div class="playlist-preview">
+                <img src="./assets/img/rock.jpg">
+                <i class="fa fa-2x fa-play-circle hidden playlist-play-icon"></i>
+              </div>
+              <p>Playlist de Rock</p>
+              <p>Playlist avec une descrption beaucoup plus longue</p>
+            </a>
+          
+          
+          
+            <a class="playlist-item flex-column" href="./playlist.html">
+              <div class="playlist-preview">
+                <img src="./assets/img/disc_weekly.jpeg">
+                <i class="fa fa-2x fa-play-circle hidden playlist-play-icon"></i>
+              </div>
+              <p>Discover Weekly</p>
+              <p>Playlist avec beaucoup de chansons</p>
+            </a>
+          
+           
+        </section>
+
       </div>
+      
       <div id="songs-list">
+        <h1>Mes Chansons</h1>
+        
+        
+        <div id="song-container" class="flex-column">
+          <div class="song-item flex-row">
+            <P>Whip</P>
+            <p>Electronic</p>
+            <p>prazkhanal</p>
+            <button class= "fa-regular fa-2x fa-heart"></button>
+          </div>
+          
+          <div class="song-item flex-row">
+            <P>Overflow</P>
+            <p>Classic</p>
+            <p>Piano Amor</p>
+            <button class= "fa-regular fa-2x fa-heart"></button>
+          </div>
+
+          <div class="song-item flex-row">
+            <P>Intrigue Fun</P>
+            <p>Jazz</p>
+            <p>Music Town</p>
+            <button class= "fa fa-2x fa-heart"></button>
+          </div>
+
+          <div class="song-item flex-row">
+            <P>Bounce</P>
+            <p>Electronic</p>
+            <p>Coma-Media</p>
+            <button class= "fa-regular fa-2x fa-heart"></button>
+          </div>
+
+          <div class="song-item flex-row">
+            <P>Summer Pranks</P>
+            <p>Rock</p>
+            <p>Lemon Music Studio</p>
+            <button class= "fa fa-2x fa-heart"></button>
+          </div>
+
+        </div>
       </div>
+
     </main>
-    <footer id="playing-bar" class="flex-row" >
+    <footer id="playing-bar" class="flex-row">
       <div>
         <p>
           Choisir une playlist à travers la

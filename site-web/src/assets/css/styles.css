@@ -44,17 +44,10 @@ h1 {
 #nav-bar {
     /*TODO : Assigner à la bonne zone de la grille */
     grid-area: nav-bar;
-    /*grid-column-end: nav-bar;*/
     height: 100%;
     background-color: var(--main-color);
 
 }
-
-/*#nav-bar:first-child
-{
-    padding-top: 50px;
-}*/
-
 
 #main-area {
     /*TODO : Assigner à la bonne zone de la grille */
@@ -105,6 +98,15 @@ li a {
     border: none;
 }
 
+#search-form {
+
+    padding-top: 10px;
+}
+
+#search-form button {
+    margin-left: 5px;
+}
+
 .playlist-item {
     align-items: center;
     justify-content: baseline;
@@ -123,17 +125,85 @@ li a {
     margin: 1px;
 }
 
+
+.playlist-item p:first-of-type{
+    color: var(--main-color);
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.playlist-container{
+    display: flex;
+    flex-wrap: flex;
+}
+
 .playlist-item p {
     color: var(--text-color);
     font-family: 'Roboto', sans-serif;
-    /*TODO : Gérer le texte trop grand */
+    /*TODO : Gérer le texte trop grand DONE */
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
     width: 180px;
 }
 
-.song-item>p {
-    flex: 0.25;
+.playlist-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    margin-left: 16px;
+
 }
+
+.playlist-item div{
+    display:flex;
+
+    max-width: 180px;
+}
+
+.playlist-item:hover i {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    visibility: visible;
+    transform: translateX(-34px);
+
+}
+
+#song-container div {
+    margin-top: 5px;
+    border: solid;
+    border-color: var(--highlight);
+    border-radius: 10px;
+    align-items: center;
+    
+}
+
+#song-container div:hover {
+   
+    border-width: thick;
+    border-color: var(--active-color);
+    
+    
+}
+
+.song-item button {
+
+    margin: 5px;
+}
+
+.song-item>p {
+    flex: 1;
+}
+
+.song-item button {
+    margin-right: 10px;
+}
+
+.song-item p:first-of-type {
+    margin-left: 10px;
+}
+
 
 .hidden {
     visibility: hidden;
@@ -149,9 +219,14 @@ li a {
     font-weight: bold;
 }
 
+
+
 /* TODO : modifier l'affichage en bas de 800px*/
-@media only screen and (max-device-width: 1px),
-only screen and (max-width: 1px) {  
+@media only screen and (max-device-width: 800px),
+only screen and (max-width: 800px) {  
     .playlist-container {
+        display: grid;
+        grid-template-columns: minmax(250px,1fr) minmax(250px,1fr);
+        
     }
 }
