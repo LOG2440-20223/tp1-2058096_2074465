@@ -46,6 +46,7 @@ h1 {
     /*TODO : Assigner à la bonne zone de la grille */
     grid-area: nav-bar;
     height: 100%;
+    padding-top: 5px;
     background-color: var(--main-color);
 
 }
@@ -216,6 +217,18 @@ a:focus {
     margin-left: 10px;
 }
 
+.song-item span {
+
+    margin-left: 10px;
+
+}
+
+.song-item i {
+    width: 100;
+    background-color: var(--hover-playlist);
+    margin-right: 10px;
+}
+
 
 .hidden {
     visibility: hidden;
@@ -229,6 +242,30 @@ a:focus {
 .form-group label {
     margin: 5px;
     font-weight: bold;
+}
+
+#playlist-header {
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+#buttons-container button:hover {
+
+    font-size: 250%;
+    color: purple;
+}
+
+#timeline-container {
+    width: 80%;
+}
+
+#playlist-edit i:hover {
+
+    background-color: white;
+    color: red;
+
 }
 
 
